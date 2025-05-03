@@ -10,4 +10,15 @@ public class Circulo {
     public void setRaio(double raio) {
         this.raio = raio;
     }
+    public double calcularDiametro() {
+        return raio * 2;
+    }
+
+    public double calcularPerimetro() {
+        return Math.PI * raio * 2;
+    }
+
+    public double calcularArea() {
+        return Math.PI * (raio * raio);
+    }   
 }
