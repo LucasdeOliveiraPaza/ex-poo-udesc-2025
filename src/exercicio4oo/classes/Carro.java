@@ -6,6 +6,8 @@ public class Carro {
     private int ano;
     private double velocidade;
 
+    double KILOMETRAGEM = 10.0;
+
     public String getModelo() {
         return modelo;
     }
@@ -36,5 +38,17 @@ public class Carro {
 
     public void setVelocidade(double velocidade) {
         this.velocidade = velocidade;
+    }
+
+    public void acelerar() {
+        velocidade += KILOMETRAGEM;
+    }
+
+    public void freiar() {
+        velocidade -= KILOMETRAGEM;
+    }
+
+    public double buscarVelocidade() {
+        return getVelocidade();
     }
 }

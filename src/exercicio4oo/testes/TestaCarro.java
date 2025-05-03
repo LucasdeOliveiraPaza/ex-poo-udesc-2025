@@ -9,11 +9,16 @@ class TestaCarro {
         uno.setModelo("uno");
         uno.setMarca("Fiat");
         uno.setAno(2012);
-        uno.setVelocidade(80.0);
+        uno.setVelocidade(0.0);
 
-        System.out.println("modelo:" + uno.getModelo());
-        System.out.println("marca:" + uno.getMarca());
-        System.out.println("ano:" + uno.getAno());
-        System.out.println("velocidade:" + uno.getVelocidade());
+        while(uno.getVelocidade() < 100.0) {
+            uno.acelerar();
+            System.out.println("velocidade: " + uno.buscarVelocidade());
+        }
+
+        while (uno.getVelocidade() > 0.0) {
+            uno.freiar();
+            System.out.println("velocidade: " + uno.buscarVelocidade());
+        }
     }
 }
