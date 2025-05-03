@@ -11,9 +11,9 @@ class TestaLivro {
         fundacao.setGenero("ficção cientifica");
         fundacao.setEmprestado(false);
 
-        System.out.println("titulo:" + fundacao.getTitulo());
-        System.out.println("autor:" + fundacao.getAutor());
-        System.out.println("genero:" + fundacao.getGenero());
-        System.out.println("emprestado:" + fundacao.isEmprestado());
+        fundacao.emprestar();
+        System.out.println("o livro " + fundacao.getTitulo() + " esta " + fundacao.verificarSituacao());
+        fundacao.devolver();
+        System.out.println("o livro " + fundacao.getTitulo() + " esta " + fundacao.verificarSituacao());
     }
 }

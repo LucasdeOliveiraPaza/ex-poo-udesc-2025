@@ -37,4 +37,16 @@ public class Livro {
     public void setEmprestado(boolean emprestado) {
         this.emprestado = emprestado;
     }
+    
+    public void emprestar() {
+        setEmprestado(true);
+    }
+
+    public void devolver() {
+        setEmprestado(false);
+    }
+
+    public String verificarSituacao() {
+        return emprestado ? "Indisponivel" : "Disponivel";
+    }
 }
