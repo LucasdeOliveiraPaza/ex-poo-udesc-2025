@@ -10,16 +10,11 @@ class TestaAluno {
         lucas.setIdade(22);
         lucas.setMatricula("22123123214");
         lucas.setNota1(10);
-        lucas.setNota2(11);
-        lucas.setNota3(-20);
-        lucas.setNota4(125);
+        lucas.setNota2(7);
+        lucas.setNota3(7);
+        lucas.setNota4(6);
 
-        System.out.println("Nome:" + lucas.getNome());
-        System.out.println("idade:" + lucas.getIdade());
-        System.out.println("matricula:" + lucas.getMatricula());
-        System.out.println("nota1:" + lucas.getNota1());
-        System.out.println("nota2:" + lucas.getNota2());
-        System.out.println("nota3:" + lucas.getNota3());
-        System.out.println("nota4:" + lucas.getNota4());
+        System.out.println("media: " + lucas.calcularMedia());
+        System.out.println("situacao: " + lucas.buscarSituacao());
     }
 }
