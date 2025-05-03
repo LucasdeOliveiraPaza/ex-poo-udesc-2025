@@ -7,9 +7,8 @@ class TestaRetangulo {
        Retangulo ret =  new Retangulo();
 
        ret.setAltura(23.5);
-       ret.setAltura(14.6);
+       ret.setLargura(12);
 
-       System.out.println("altura:" + ret.getAltura());
-       System.out.println("largura:" + ret.getLargura());
+       System.out.println("area: " + ret.calcularArea());
     }
 }
