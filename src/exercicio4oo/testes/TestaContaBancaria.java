@@ -8,10 +8,14 @@ class TestaContaBancaria {
 
         cb.setNumeroConta("1123");
         cb.setTitular("Lucas");
-        cb.setSaldo(8597.22);
+        cb.setSaldo(8000.0);
 
-        System.out.println("numero conta:" + cb.getNumeroConta());
-        System.out.println("titular:" + cb.getTitular());
-        System.out.println("saldo:" + cb.getSaldo());
+        cb.depositar(1000);
+
+        System.out.println("saldo: " + cb.buscarSaldo());
+
+        cb.sacar(3000);
+
+        System.out.println("saldo: " + cb.buscarSaldo());
     }
 }
