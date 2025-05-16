@@ -5,6 +5,17 @@ public class ContaBancaria {
     private String titular;
     private double saldo;
 
+     public ContaBancaria () {
+        this.numeroConta = "";
+        this.titular = "";
+    }
+
+    public ContaBancaria (String numeroConta, String titular, double saldo) {
+        this.numeroConta = numeroConta;
+        this.titular = titular;
+        this.saldo = saldo;
+    }
+
     public String getNumeroConta() {
         return numeroConta;
     }
@@ -26,18 +37,33 @@ public class ContaBancaria {
     }
 
     public void setSaldo(double saldo) {
-        this.saldo = saldo;
+        if (saldo > 0) {
+            this.saldo = saldo;
+        }
     }
 
     public void depositar(double valor) {
-        saldo += valor;
+        if (valor > 0) {
+            saldo += valor;
+        }
     }
 
     public void sacar(double valor) {
-        saldo -= valor;
+        if (valor > 0) {
+            saldo -= valor;
+        } 
     }
 
     public double buscarSaldo() {
         return getSaldo();
+    }
+
+     @Override
+    public String toString() {
+        return "Objeto ContaBancaria ["+
+            "\n\tmatricula = " + numeroConta +
+            "\n\tnome = " + titular +
+            "\n\tidade = " + saldo +
+        "\n]";
     }
 }
