@@ -58,12 +58,12 @@ public class ContaBancaria {
         return getSaldo();
     }
 
-     @Override
+    @Override
     public String toString() {
         return "Objeto ContaBancaria ["+
-            "\n\tmatricula = " + numeroConta +
-            "\n\tnome = " + titular +
-            "\n\tidade = " + saldo +
+            "\n\tnumeroConta = " + numeroConta +
+            "\n\ttitular = " + titular +
+            "\n\tsaldo = " + saldo +
         "\n]";
     }
 }

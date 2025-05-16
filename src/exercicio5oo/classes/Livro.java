@@ -6,6 +6,19 @@ public class Livro {
     private String genero;
     private boolean emprestado;
 
+    public Livro () {
+        this.titulo = "";
+        this.autor = "";
+        this.genero = ""; 
+    }
+
+    public Livro (String titulo, String autor, String genero, boolean emprestado) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.genero = genero; 
+        this.emprestado = emprestado;
+    }
+
     public String getTitulo() {
         return titulo;
     }
@@ -39,14 +52,32 @@ public class Livro {
     }
     
     public void emprestar() {
-        setEmprestado(true);
+        if (!this.emprestado) {
+            setEmprestado(true);
+        } else {
+            System.out.println("esse livro já foi emprestado");
+        }
     }
 
     public void devolver() {
-        setEmprestado(false);
+        if (this.emprestado) {
+            setEmprestado(false);
+        } else {
+            System.out.println("esse livro já foi devolvido");
+        }
     }
 
     public String verificarSituacao() {
         return emprestado ? "Indisponivel" : "Disponivel";
+    }
+
+    @Override
+    public String toString() {
+        return "Objeto Livro ["+
+            "\n\ttitulo = " + titulo +
+            "\n\tautor = " + autor +
+            "\n\tgenero = " + genero +
+            "\n\temprestado = " + emprestado +
+        "\n]";
     }
 }
