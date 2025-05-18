@@ -21,8 +21,8 @@ public class Retangulo {
     public void setLargura(double largura) {
         if (largura >= 0 && largura <=1000) {
             this.largura = largura;
-        }else{
-            throw new IllegalArgumentException("Largura invalida, deve estar entre 0 e 1000");
+        } else {
+            System.out.println("Largura invalida, deve estar entre 0 e 1000");
         }
     }
 
@@ -33,8 +33,8 @@ public class Retangulo {
     public void setAltura(double altura) {
         if (altura >= 0 && altura <=1000) {
             this.altura = altura;
-        }else{
-            throw new IllegalArgumentException("Altura invalida, deve estar entre 0 e 1000");
+        } else {
+            System.out.println("Altura invalida, deve estar entre 0 e 1000");
         }
     }
 
@@ -44,6 +44,6 @@ public class Retangulo {
 
     @Override
     public String toString() {
-        return "Largura: " + largura + ", Altura: " + altura + ", Area: " + calcularArea();
+        return "Largura: " + largura + ", Altura: " + altura;
     }
 }
