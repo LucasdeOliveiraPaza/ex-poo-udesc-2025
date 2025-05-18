@@ -15,5 +15,6 @@ class TestaCirculo {
         Circulo grande = new Circulo(1500);
         Circulo pequeno = new Circulo(25);
         System.out.println(pequeno);
+        System.out.println(grande);
     }
 }

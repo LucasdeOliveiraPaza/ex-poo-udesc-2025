@@ -39,7 +39,7 @@ public class Circulo {
     
     @Override
     public String toString() {
-        return "Círculo raio = " + raio + " ";
+        return "Círculo raio = " + raio;
     }
     
 }

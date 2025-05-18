@@ -4,7 +4,6 @@ public class Aluno {
     private String matricula;
     private String nome;
     private int idade;
-
     private double nota1, nota2, nota3, nota4;
 
     public Aluno () {
