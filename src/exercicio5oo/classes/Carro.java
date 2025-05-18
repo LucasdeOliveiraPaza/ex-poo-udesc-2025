@@ -8,6 +8,20 @@ public class Carro {
 
     double KILOMETRAGEM = 10.0;
 
+    public Carro() {
+        this.modelo = "";
+        this.marca = "";
+        this.ano = 0;
+        this.velocidade = 0.0;
+    }
+
+    public Carro(String modelo, String marca, int ano, double velocidade) {
+        this.modelo = modelo;
+        this.marca = marca;
+        this.ano = ano;
+        setVelocidade(velocidade);
+    }
+
     public String getModelo() {
         return modelo;
     }
@@ -37,7 +51,14 @@ public class Carro {
     }
 
     public void setVelocidade(double velocidade) {
-        this.velocidade = velocidade;
+        if (velocidade < 0) {
+            this.velocidade = 0;
+        } else if (velocidade > 300) {
+            this.velocidade = 300;
+        } else {
+            this.velocidade = velocidade;
+        }
+
     }
 
     public void acelerar() {
@@ -50,5 +71,10 @@ public class Carro {
 
     public double buscarVelocidade() {
         return getVelocidade();
+    }
+
+    @Override
+    public String toString() {
+        return "Modelo: " + modelo + ", Marca: " + marca + ", Ano: " + ano + ", Velocidade: " + velocidade + " km/h";
     }
 }

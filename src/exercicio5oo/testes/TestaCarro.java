@@ -4,6 +4,14 @@ import exercicio5oo.classes.Carro;
 
 class TestaCarro {
     public static void main(String[] args) {
+        Carro ferrari = new Carro(
+                "F8",
+                "Ferrari",
+                2023,
+                295.0);
+
+        System.out.println("Informações do Carro: " + ferrari);
+
         Carro uno = new Carro();
 
         uno.setModelo("uno");
@@ -11,7 +19,7 @@ class TestaCarro {
         uno.setAno(2012);
         uno.setVelocidade(0.0);
 
-        while(uno.getVelocidade() < 100.0) {
+        while(uno.getVelocidade() < 300.0) {
             uno.acelerar();
             System.out.println("velocidade: " + uno.buscarVelocidade());
         }
