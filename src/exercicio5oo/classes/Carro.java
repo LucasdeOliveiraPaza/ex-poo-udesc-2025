@@ -6,7 +6,7 @@ public class Carro {
     private int ano;
     private double velocidade;
 
-    double KILOMETRAGEM = 10.0;
+    final double KILOMETRAGEM = 10.0;
 
     public Carro() {
         this.modelo = "";

@@ -15,10 +15,10 @@ public class Aluno {
         this.matricula = matricula;
         this.nome = nome;
         this.idade = idade;
-        this.nota1 = nota1;
-        this.nota2 = nota2;
-        this.nota3 = nota3;
-        this.nota4 = nota4;
+        this.setNota1(nota1);
+        this.setNota2(nota2);
+        this.setNota3(nota3);
+        this.setNota4(nota4);
     }
 
     public String getMatricula() {
