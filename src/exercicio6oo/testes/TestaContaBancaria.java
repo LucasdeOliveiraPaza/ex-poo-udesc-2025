@@ -23,5 +23,11 @@ class TestaContaBancaria {
 
         System.out.println(cb);
         System.out.println(cnt);
+
+        ContaBancaria conta = new ContaBancaria("8888");
+        System.out.println(conta);
+
+        ContaBancaria bc = new ContaBancaria("1010", "EU");
+        System.out.println(bc);
     }
 }

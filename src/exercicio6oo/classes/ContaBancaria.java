@@ -10,9 +10,18 @@ public class ContaBancaria {
         this.titular = "";
     }
 
-    public ContaBancaria (String numeroConta, String titular, double saldo) {
+    public ContaBancaria (String numeroConta) {
+        this();
         this.numeroConta = numeroConta;
+    }
+
+    public ContaBancaria (String numeroConta, String titular) {
+        this(numeroConta);
         this.titular = titular;
+    }
+
+    public ContaBancaria (String numeroConta, String titular, double saldo) {
+        this(numeroConta, titular);
         this.saldo = saldo;
     }
 
@@ -60,10 +69,12 @@ public class ContaBancaria {
 
     @Override
     public String toString() {
-        return "Objeto ContaBancaria ["+
-            "\n\tnumeroConta = " + numeroConta +
-            "\n\ttitular = " + titular +
-            "\n\tsaldo = " + saldo +
+        String txt = "Objeto ContaBancaria ["+
+            "\n\tnumeroConta = %s" +
+            "\n\ttitular = %s" +
+            "\n\tsaldo = %.2f" +
         "\n]";
+
+        return String.format(txt, numeroConta, titular, saldo);
     }
 }
