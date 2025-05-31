@@ -12,9 +12,18 @@ public class Livro {
         this.genero = ""; 
     }
 
-    public Livro (String titulo, String autor, String genero, boolean emprestado) {
+    public Livro (String titulo) {
+        this();
         this.titulo = titulo;
+    }
+
+    public Livro (String titulo, String autor) {
+        this(titulo);
         this.autor = autor;
+    }
+
+    public Livro (String titulo, String autor, String genero, boolean emprestado) {
+        this(titulo, autor);
         this.genero = genero; 
         this.emprestado = emprestado;
     }
@@ -73,11 +82,13 @@ public class Livro {
 
     @Override
     public String toString() {
-        return "Objeto Livro ["+
-            "\n\ttitulo = " + titulo +
-            "\n\tautor = " + autor +
-            "\n\tgenero = " + genero +
-            "\n\temprestado = " + emprestado +
+        String txt = "Objeto Livro ["+
+            "\n\ttitulo = %s" +
+            "\n\tautor = %s" +
+            "\n\tgenero = %s" +
+            "\n\temprestado = %b" +
         "\n]";
+
+        return String.format(txt, titulo, autor, genero, emprestado);
     }
 }

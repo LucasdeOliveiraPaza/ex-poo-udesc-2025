@@ -26,5 +26,11 @@ class TestaLivro {
 
         System.out.println(fundacao);
         System.out.println(inferno);
+
+        Livro potter = new Livro("Harry Potter");
+        System.out.println(potter);
+
+        Livro ring = new Livro("Senhor dos Aneis", "Tolkien");
+        System.out.println(ring);
     }
 }
