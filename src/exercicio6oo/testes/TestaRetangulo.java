@@ -16,8 +16,11 @@ class TestaRetangulo {
 
         Retangulo ret3 = new Retangulo(1200, 1500);
 
+        Retangulo ret4 = new Retangulo(800);
+
         System.out.println(ret);
         System.out.println(ret2);
         System.out.println(ret3);
+        System.out.println(ret4);
     }
 }

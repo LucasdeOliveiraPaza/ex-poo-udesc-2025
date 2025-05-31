@@ -9,8 +9,13 @@ public class Retangulo {
         this.altura = 0;
     }
 
-    public Retangulo(double largura, double altura) {
+    public Retangulo(double largura) {
+        this();
         setLargura(largura);
+    }
+
+    public Retangulo(double largura, double altura) {
+        this(largura);
         setAltura(altura);
     }
 
@@ -44,6 +49,11 @@ public class Retangulo {
 
     @Override
     public String toString() {
-        return "Largura: " + largura + ", Altura: " + altura;
+         String txt = "Objeto Retangulo ["+
+            "\n\tlargura = %.2f" +
+            "\n\taltura = %.2f" +
+        "\n]";
+
+        return String.format(txt, largura, altura);
     }
 }
