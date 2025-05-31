@@ -3,7 +3,7 @@ package exercicio6oo.classes;
 public class Circulo {
     private double raio;
 
-    public Circulo(){
+    public Circulo() {
         this.raio = 0.0;
     }
 
@@ -39,7 +39,11 @@ public class Circulo {
     
     @Override
     public String toString() {
-        return "Círculo raio = " + raio;
+        String txt = "Objeto Circulo ["+
+            "\n\traio = %.2f" +
+        "\n]";
+
+        return String.format(txt, raio);
     }
     
 }
