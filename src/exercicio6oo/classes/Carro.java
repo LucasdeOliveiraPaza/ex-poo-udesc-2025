@@ -15,10 +15,19 @@ public class Carro {
         this.velocidade = 0.0;
     }
 
-    public Carro(String modelo, String marca, int ano, double velocidade) {
+    public Carro(String modelo, String marca) {
+        this();
         this.modelo = modelo;
         this.marca = marca;
+    }
+
+     public Carro(String modelo, String marca, int ano) {
+        this(modelo, marca);
         this.ano = ano;
+     }
+
+    public Carro(String modelo, String marca, int ano, double velocidade) {
+        this(modelo, marca, ano);
         setVelocidade(velocidade);
     }
 
@@ -75,6 +84,12 @@ public class Carro {
 
     @Override
     public String toString() {
-        return "Modelo: " + modelo + ", Marca: " + marca + ", Ano: " + ano + ", Velocidade: " + velocidade + " km/h";
+        String txt =  "Objeto Carro ["+
+            "\n\tmodelo = %s" +
+            "\n\tmarca = %s" +
+            "\n\tano = %d" +
+            "\n\tvelocidade = %.2f"+
+        "\n]";
+        return String.format(txt, modelo, marca, ano, velocidade);
     }
 }

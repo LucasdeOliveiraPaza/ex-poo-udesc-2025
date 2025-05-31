@@ -10,7 +10,7 @@ class TestaCarro {
                 2023,
                 295.0);
 
-        System.out.println("Informações do Carro: " + ferrari);
+        System.out.println(ferrari);
 
         Carro uno = new Carro();
 
@@ -28,5 +28,11 @@ class TestaCarro {
             uno.freiar();
             System.out.println("velocidade: " + uno.buscarVelocidade());
         }
+
+        Carro focus = new Carro("Focus", "Ford");
+        System.out.println(focus);
+
+        Carro doblo = new Carro("Doblo","Fiat", 2012);
+        System.out.println(doblo);
     }
 }
